@@ -55,13 +55,11 @@
 
 
     <form id="js-dbDeleteModal" class="dbDeleteModal">
-      That's Harsh ... !
-      <br>
-      <br>
-      Are you sure - Delete this Product?
+      This action is permanent.
       <br>
       <br>
       <p class="dbDeleteProduct"></p>
+      <br>
       <br>
       <input type="button" name="delete" value="Yes - Delete" onclick="deleteProduct()">
       <input type="button" name="abort" value="No - Bailout" onclick="fetchProduct('cancelDelete')">
@@ -116,7 +114,7 @@
       <input type="button" name="dbsave" value="Save" onclick="saveProduct()">
       <input type="button" name="dbcancel" value="Cancel" onclick="fetchProduct('Cancel')">
       <input type="button" name="dbadd" value="Add" onclick="setAddEnv('Add')">
-      <input type="button" name="dbdelete" value="Delete" onclick="deleteConfirm()">
+      <input type="button" name="dbdelete" value="Delete" id="js-delButton" disabled onclick="confirmDelete()">
       <input id="js-changed" type="hidden" name="changed" value="notChanged">
     </div>
 

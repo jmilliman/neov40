@@ -13,10 +13,11 @@ $(document).ready(function() {
 
 
 
-function deleteConfirm() {
+function confirmDelete() {
+  var promptMsg = 'Delete ' + document.getElementById('js-pname').value + ' ?'
   document.querySelector('.dbDeleteModal').classList.add('show-me');
   document.getElementById('js-overlay').classList.add('dim');
-  document.querySelector('.dbDeleteProduct').innerHTML = document.getElementById('js-pname').value;
+  document.querySelector('.dbDeleteProduct').innerHTML = promptMsg;
   toggleForm('Disable');
 }
 
@@ -314,22 +315,26 @@ function lastSaveChance() {
 
 
 function fetchProduct(fetchState) {
-
   var productChanged = document.getElementById('js-changed').value;
+  var delBtn = document.getElementById('js-delButton');
+
+  delBtn.disabled = false;
 
   if (productChanged=='Changed' && fetchState == 'Fetch') {
     lastSaveChance();
     return;
   }
 
-    if (fetchState == 'cancelDelete') {
-      document.querySelector('.dbDeleteModal').classList.remove('show-me');
-      document.getElementById('js-overlay').classList.remove('dim');
-      toggleForm('Enable');
-      console.log('fetchState == cancelDelete js-sku = ' + document.getElementById('js-sku').value);
-    }
+  if (fetchState == 'cancelDelete') {
+    document.querySelector('.dbDeleteModal').classList.remove('show-me');
+    document.getElementById('js-overlay').classList.remove('dim');
+    toggleForm('Enable');
+    console.log('fetchState == cancelDelete js-sku = ' + document.getElementById('js-sku').value);
+  }
 
   if (fetchState == 'Cancel') {
+    delBtn.disabled = true;
+
     if (productChanged=='Changed') {
       document.getElementById('js-changed').value = 'notChanged';
       document.querySelector('.dbSaveModal').classList.remove('show-me');
