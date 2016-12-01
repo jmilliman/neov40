@@ -63,6 +63,7 @@ a {
 
 .body-admin {
   background-color: #3783d0;
+  background-color: darkgreen;
   height: 100%;
   width: 100%;
 }
@@ -261,7 +262,7 @@ input[disabled] {
   background-color: #fff;
   border: solid 2px #3783d0;
   border-radius: 5px;
-  margin: 15px auto;
+  margin: 15px auto 100px auto;
   min-width: 1200px;
   overflow: auto;
   padding: 1%;
