@@ -97,8 +97,6 @@
           <ul>
             <li><a href="blog/index.php">Visit Our Blog</a></li>
             <li><a href="blog-signup.php">Sign-Up</a></li>
-            <li><a href="loginform.php">DB Login</a></li>
-            <li><a href="dbmaint1.php">DB Maint</a></li>
           </ul>
         </li>
       </ul>
