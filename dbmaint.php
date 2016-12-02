@@ -38,9 +38,6 @@
 
 
 
-
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -50,6 +47,23 @@
 <body class="body-admin">
 
   <?php render('header')?>
+
+  <h1 class="db-title neo-white">Product Maintenance</h1>
+
+
+  <? if ( !isset($_SESSION['authenticated']) ) : ?>
+    <p class="ptext-center--large neo-white">
+      <br>
+      <br>
+      <br>
+      Access Denied
+      <br>
+      <br>
+      You are not logged in!
+    </p>
+    <? exit ?>
+  <? endif ?>
+
 
   <div id="js-overlay"></div>
 
@@ -87,8 +101,6 @@
       <br>
       <input type="button" name="ok" value="OK">
     </form>
-
-  <h1 class="db-title neo-white">Product Maintenance</h1>
 
   <form class="dbinput-wrapper">
 
