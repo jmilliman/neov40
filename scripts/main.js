@@ -145,6 +145,7 @@ function setAddEnv(state) {
     addButton.classList.add('hide-me');
     deleteButton.classList.add('hide-me');
     cancelButton.setAttribute('onclick', 'setAddEnv("Remove")');
+    cancelButton.setAttribute('value', 'Exit');
 
     document.querySelector('.db-title').innerHTML = 'Add Product';
 
@@ -161,6 +162,7 @@ function setAddEnv(state) {
     addButton.classList.remove('hide-me');
     deleteButton.classList.remove('hide-me');
     cancelButton.setAttribute('onclick', 'fetchProduct()');
+    cancelButton.setAttribute('value', 'Cancel');
 
     document.getElementById('js-changed').value = 'notChanged';
     document.querySelector('.db-title').innerHTML = 'Product Maintenance';

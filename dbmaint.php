@@ -50,7 +50,6 @@
 
   <h1 class="db-title neo-white">Product Maintenance</h1>
 
-
   <? if ( !isset($_SESSION['authenticated']) ) : ?>
     <p class="ptext-center--large neo-white">
       <br>
@@ -119,7 +118,6 @@
       ?>
 
     </select>
-
 
 
     <div class="dbbutton-wrap">

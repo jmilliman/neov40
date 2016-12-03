@@ -1,9 +1,8 @@
 <?php
 
-// application constants
 define('DB_SERVER', "localhost");
-define('DB_USER', "root");
-define('DB_PASSWORD', "root");
+define('DB_USER', 'nwaccess');
+define('DB_PASSWORD', 'nwaccess');
 define('DB_NAME', "nw");
 define('DB_CHARSET', "utf8");
 
@@ -27,10 +26,10 @@ function meta($params)
 
 
 
-function quoWrap($field) {
-  $fieldContents = ($field != '' ? '"' . $field . '"' : '');
-  return $fieldContents;
-}
+//function quoWrap($field) {
+//  $fieldContents = ($field != '' ? '"' . $field . '"' : '');
+//  return $fieldContents;
+//}
 
 
 
@@ -41,8 +40,8 @@ function openDB() {
     PDO::ATTR_EMULATE_PREPARES   => false
   ];
 
-  $dsn    = 'mysql:host='. DB_SERVER .';dbname='. DB_NAME .';charset=' . DB_CHARSET;
-  $nwpdo    = new PDO($dsn, DB_USER, DB_PASSWORD, $opt);
+  $dsn   = 'mysql:host='. DB_SERVER .';dbname='. DB_NAME .';charset=' . DB_CHARSET;
+  $nwpdo = new PDO($dsn, $_SESSION['user'], $_SESSION['password'], $opt);
 
   return($nwpdo);
 }

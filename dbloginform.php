@@ -34,7 +34,7 @@
   {
 
     $host = $_SERVER['HTTP_HOST'];
-    $pdo = null;
+    $pdo  = null;
     header("LOCATION: http://$host");
     exit;
   }
@@ -55,10 +55,13 @@
 
       if ($row['username'] == $user && $row['password'] == $password)
       {
-        $_SESSION['authenticated'] = true;
-        $_SESSION['user'] = $_POST['user'];
+        $_SESSION['authenticated']  = true;
+        $_SESSION['user']           = $user;
+        $_SESSION['password']       = $password;
+
         $host = $_SERVER['HTTP_HOST'];
         $path = PATH;
+        $pdo  = null;
 
         header("LOCATION: http://$host$path");
         exit;
