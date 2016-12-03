@@ -132,90 +132,90 @@
 
     <div class="dbinput-col-1-5">
       SKU:
-      <input id="js-sku" name="sku" type="text" onchange="setChangeFlag()" value=<? echo $sku ?>>
+      <input id="js-sku" name="sku" type="text" onchange="setChangeFlag()" value=<? $sku ?>>
     </div>
 
     <div class="dbinput-col-1-5">
       Wholesale: $
-      <input id="js-wholesale" name="wholesale" type="number" step=".01" onchange="setChangeFlag()" value=<? echo $wholesale ?>>
+      <input id="js-wholesale" name="wholesale" type="number" step=".01" onchange="setChangeFlag()" value=<? $wholesale ?>>
     </div>
 
     <div class="dbinput-col-1-5">
       Retail: $
-      <input id="js-retail" name="retail" type="number" step=".01" onchange="setChangeFlag()" value=<? echo $retail ?>>
+      <input id="js-retail" name="retail" type="number" step=".01" onchange="setChangeFlag()" value=<? $retail ?>>
     </div>
 
     <div class="dbinput-col-1-5">
       Distributor: $
-      <input id="js-distprice" name="distprice" type="number" step=".01" onchange="setChangeFlag()" value=<? echo $distprice ?>>
+      <input id="js-distprice" name="distprice" type="number" step=".01" onchange="setChangeFlag()" value=<? $distprice ?>>
     </div>
 
     <div class="dbinput-col-1-5">
       Dist. Rate (%):
-      <input id="js-distrate" name="distrate" type="number" step=".01" onchange="setChangeFlag()" value=<? echo $distrate ?>>
+      <input id="js-distrate" name="distrate" type="number" step=".01" onchange="setChangeFlag()" value=<? $distrate ?>>
     </div>
 
     <div class="dbinput-col-1-2">
       Product Name:
-      <input id="js-pname" name="pname" type="text" size="36" maxlength="32" onchange="setChangeFlag()" value=<? echo $pname ?>>
+      <input id="js-pname" name="pname" type="text" size="36" maxlength="32" onchange="setChangeFlag()" value=<? $pname ?>>
     </div>
 
     <div class="dbinput-col-1-2">
       Botanical Name:
-      <input id="js-bname" name="bname" type="text" size="48" maxlength="64" onchange="setChangeFlag()" value=<? echo $bname ?>>
+      <input id="js-bname" name="bname" type="text" size="48" maxlength="64" onchange="setChangeFlag()" value=<? $bname ?>>
     </div>
 
     <div class="dbinput-col-2-3">
       Description:
-      <textarea id="js-description" name="description" onchange="setChangeFlag()" ><? echo $description ?></textarea>
+      <textarea id="js-description" name="description" onchange="setChangeFlag()" ><? $description ?></textarea>
     </div>
 
     <div class="dbinput-col-1-3">
       Origin:
-      <input id="js-origin" name="origin" type="text" size="32" onchange="setChangeFlag()" value=<? echo $origin ?>>
+      <input id="js-origin" name="origin" type="text" size="32" onchange="setChangeFlag()" value=<? $origin ?>>
     </div>
 
     <div class="dbinput-col-1-3">
       Family:
-      <input id="js-family" name="family" type="text" size="32" onchange="setChangeFlag()" value=<? echo $family ?>>
+      <input id="js-family" name="family" type="text" size="32" onchange="setChangeFlag()" value=<? $family ?>>
     </div>
 
     <div class="dbinput-col-1-3">
       Size:
-      <input id="js-size" name="size" type="text" size="32" maxlength="32" onchange="setChangeFlag()" value=<? echo $size ?>>
+      <input id="js-size" name="size" type="text" size="32" maxlength="32" onchange="setChangeFlag()" value=<? $size ?>>
     </div>
 
     <div class="dbinput-col-1-3">
       Img Filename:
-      <input id="js-imgfile" name="imgfile" type="text" size="24" maxlength="32" onchange="setChangeFlag()" value=<? echo $imgfile ?>>
+      <input id="js-imgfile" name="imgfile" type="text" size="24" maxlength="32" onchange="setChangeFlag()" value=<? $imgfile ?>>
     </div>
 
     <div class="dbinput-col-1-3">
       Product Catagory
       <br>
       <br>
-      <input id="js-eoil" type="radio" name="cat" onchange="setChangeFlag()" value=<? echo $eoil ?>> Essential Oil
+      <input id="js-eoil" type="radio" name="cat" onchange="setChangeFlag()" value=<? $eoil ?>> Essential Oil
       <br>
       <br>
-      <input id="js-boil" type="radio" name="cat" onchange="setChangeFlag()" value=<? echo $boil ?>> Botanical Oil
+      <input id="js-boil" type="radio" name="cat" onchange="setChangeFlag()" value=<? $boil ?>> Botanical Oil
       <br>
       <br>
-      <input id="js-other" type="radio" name="cat" onchange="setChangeFlag()" value=<? echo $other ?>> Other Product
+      <input id="js-other" type="radio" name="cat" onchange="setChangeFlag()" value=<? $other ?>> Other Product
     </div>
 
     <div class="dbinput-col-2-3">
       Extraction:
-      <textarea id="js-emethod" name="emethod" onchange="setChangeFlag()" ><? echo $emethod ?></textarea>
+      <textarea id="js-emethod" name="emethod" onchange="setChangeFlag()" ><? $emethod ?></textarea>
     </div>
 
     <div class="dbinput-col-2-3">
       Properties:
-      <textarea id="js-properties" name="properties" onchange="setChangeFlag()" ><? echo $properties ?></textarea>
+      <textarea id="js-properties" name="properties" onchange="setChangeFlag()" ><? $properties ?></textarea>
     </div>
 
     <div class="dbinput-col-2-3">
       Ingredients:
-      <textarea id="js-ingredients" name="ingredients" onchange="setChangeFlag()" ><? echo $ingredients ?></textarea>
+      <textarea id="js-ingredients" name="ingredients" onchange="setChangeFlag()" ><? $ingredients ?></textarea>
     </div>
   </form>
 

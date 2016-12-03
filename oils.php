@@ -55,6 +55,59 @@
     </div>
 
 
+
+
+    <div class="container-product">
+      <div class="cart-wrap">
+        <p class="ptext-product-name"><? $pname . ' ' . $size ?></p>
+
+        <form class="form-addtocart" action="https://napashaway.foxycart.com/cart" method="post" accept-charset="utf-8">
+
+          <input type="hidden" name="name" value = <? $pname . ' ' . $size ?> />
+          <input type="hidden" name="price" value = <? $retail ?> />
+          <input type="hidden" name="code" value = <? $sku ?> />
+          <input type="hidden" name="quantity" value="quantity" />
+          <input type="hidden" name="quantity_min" value="1" />
+          <input type="hidden" name="quantity_max" value="1" />
+          <input type="hidden" name="category" value="5MLB" />
+
+          <label class="cart-label-left"> <? $retail ?> &nbsp; Qty &nbsp;</label>
+          <input class="form-qtyspin" type="number" min="1" max="1" step="1" value="1" name="quantity" />
+          <input class="form-cartbutton" type="submit" value="Add to Cart" />
+        </form>
+      </div>
+
+      <p class="ptext-no-just">
+        Botanical Name: <? $bname ?>
+        <br>
+        <br> Extraction: <? $emethod ?>
+        <br>
+        <br> Origin: <? $origin ?>
+        <br>
+        <br>
+      </p>
+
+      <div class="container-img-product">
+        <img class="img-ml5" alt="Five milliliter bottle with Napasha Way label" src="images/<? $imgfile ?>">
+      </div>
+
+      <p class="ptext">
+        <? $description ?>
+        <br>
+        <br>
+        <? $properties ?>
+      </p>
+
+      <p class="ptext-italic">
+        These products and statements have not been evaluated by the FDA.  Consult a health care practitioner for medical advice.
+      </p>
+
+      <div class="clrfix"></div>
+    </div>
+
+
+
+
     <div class="container-product"> <!-- Atlas Cedar -->
       <div class="cart-wrap">
         <p class="ptext-product-name">Atlas Cedar 5ml</p>
