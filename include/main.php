@@ -26,13 +26,6 @@ function meta($params)
 
 
 
-//function quoWrap($field) {
-//  $fieldContents = ($field != '' ? '"' . $field . '"' : '');
-//  return $fieldContents;
-//}
-
-
-
 function openDB() {
   $opt = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,

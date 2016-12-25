@@ -56,8 +56,65 @@
 
 
 
+    <? php
+
+    $pdo = openDB();
+    $nwQuery = $pdo->query('SELECT * FROM products WHERE eoil = ORDER BY pname');
+
+    echo '<div class="container-product">'
+    echo   '<div class="cart-wrap">'
+    echo     '<p class="ptext-product-name">' . $pname . ' ' . $size</p>
+
+    echo     '<form class="form-addtocart" action="https://napashaway.foxycart.com/cart" method="post" accept-charset="utf-8">'
+
+    echo       '<input type="hidden" name="name" value = ' . $pname . ' ' . $size . '/>'
+    echo       '<input type="hidden" name="price" value = ' . $retail . '/>'
+    echo       '<input type="hidden" name="code" value = ' . $sku . '/>'
+    echo       '<input type="hidden" name="quantity" value="quantity" />'
+    echo       '<input type="hidden" name="quantity_min" value="1" />'
+    echo       '<input type="hidden" name="quantity_max" value="1" />'
+    echo       '<input type="hidden" name="category" value="5MLB" />'
+
+    echo       '<label class="cart-label-left">' . $retail . '&nbsp; Qty &nbsp;</label>'
+    echo       '<input class="form-qtyspin" type="number" min="1" max="1" step="1" value="1" name="quantity" />'
+    echo       '<input class="form-cartbutton" type="submit" value="Add to Cart" />'
+    echo     '</form>'
+    echo   '</div>'
+
+    echo   '<p class="ptext-no-just">'
+    echo     'Botanical Name: ' . $bname
+    echo     '<br>'
+    echo     '<br> Extraction: ' . $emethod
+    echo     '<br>'
+    echo     '<br> Origin: ' . $origin
+    echo     '<br>'
+    echo     '<br>'
+    echo   '</p>'
+
+    echo   '<div class="container-img-product">'
+    echo     '<img class="img-ml5" alt="Five milliliter bottle with Napasha Way label" src="images/' . $imgfile . '">'
+    echo   '</div>'
+
+    echo   '<p class="ptext">'
+    echo     $description
+    echo     '<br>'
+    echo     '<br>'
+    echo     $properties
+    echo   '</p>'
+
+    echo   '<p class="ptext-italic">'
+    echo     'These products and statements have not been evaluated by the FDA.  Consult a health care practitioner for medical advice.'
+    echo   '</p>'
+
+    echo   '<div class="clrfix"></div>'
+    echo '</div>'
+
+    ?>
 
 
+
+
+<!--
     <div class="container-product">
       <div class="cart-wrap">
         <p class="ptext-product-name"><? $pname . ' ' . $size ?></p>
@@ -105,7 +162,7 @@
 
       <div class="clrfix"></div>
     </div>
-
+-->
 
 
 
